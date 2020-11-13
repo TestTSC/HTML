@@ -1,0 +1,80 @@
+<!DOCTYPE HTML SYSTEM>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>QuerySelector & QuerySelectorAll Demos</title>
+
+	<style>
+
+		.blueEl
+		{
+			background-color: RGB(0, 0, 255);
+			height: 32px;
+			width: 128px;
+		}
+
+
+		.redEl
+		{
+			background-color: RGB(255, 0, 0);
+			height: 32px;
+			width: 128px;
+		}
+
+
+		.sqrEl
+		{
+			height: 64px;
+			width: 64px;
+		}
+
+	</style>
+
+
+</head>
+
+<body>
+
+        <h3>  Result  </h3>
+        	<input type="text" id="Result" value="" size="40">
+
+        <h3>  Buttons  </h3>
+		<input type="button" id="button1" value="Button 1" onClick="Result.value = 'You clicked: ' + this.id;">
+		<input type="button" id="button2" value="Button 2" class="blueEl" onClick="Result.value = 'You clicked: ' + this.id;">
+		<input type="button" id="button3" value="Button 3" class="blueEl sqrEl" onClick="Result.value = 'You clicked: ' + this.id;">
+		<input type="button" id="button4" value="Button 4" class="redEl" onClick="Result.value = 'You clicked: ' + this.id;">
+		<input type="button" id="button5" value="Button 5" class="blueEl" onClick="Result.value = 'You clicked: ' + this.id;">
+		<input type="button" id="button6" value="Button 6" class="sqrEl" onClick="Result.value = 'You clicked: ' + this.id;">
+
+	<h3>  Images  </h3>	
+		<img src="img/01.png" id="image1" height="100" width="100" onClick="Result.value = 'You clicked: ' + this.id;">
+		<img src="img/01.png" id="image2" class="sqrEl" onClick="Result.value = 'You clicked: ' + this.id;">
+
+        <h3>  Inputs  </h3>
+        	<input type="text" id="input1" value="" class="sqrEl" onClick="Result.value = 'You clicked: ' + this.id;">
+
+	<h3>  Tree  </h3>	
+
+		<ul id="container">
+			<li id="item1" onClick="Result.value = 'You clicked: ' + this.id;"> Item1
+           			<ul>
+            				<li id="item11" onClick="Result.value = 'You clicked: ' + this.id;"> Item11 </li>             
+				</ul>        
+			</li>
+			<li id="item2" onClick="Result.value = 'You clicked: ' + this.id;"> Item2 </li>
+			<li id="item3" onClick="Result.value = 'You clicked: ' + this.id;"> Item3 </li> 
+        
+		</ul>   
+
+
+        <h3>  Frames  </h3>
+
+ 		<iframe src="testf1.html" width="512" height="256" align="left">
+
+ 		</iframe>
+
+
+</body>
+
+</html>
+
