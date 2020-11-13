@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>MooTools Demos - Accordion</title>
+
+	<style>
+
+		.green
+		{
+			background-color: RGB(0, 255, 0);
+			height: 32px;
+			width: 128px;
+		}
+
+
+		.redEl
+		{
+			background-color: RGB(255, 0, 0);
+			height: 32px;
+			width: 128px;
+		}
+
+
+		.greenBlueEl
+		{
+			background-color: RGB(0, 255, 255);
+			height: 32px;
+			width: 128px;
+		}
+
+	</style>
+
+
+</head>
+
+<body>
+
+        <h3>  Result  </h3>
+        	<input type="text" id="Result" value="" size="40">
+
+        <h3>  Buttons  </h3>
+		<input type="button" id="button1" value="Button 1" onClick="Result.value = 'You clicked: ' + this.id;" ondblclick = "Result.value = 'You double clicked: ' + this.id;" oncontextmenu = "Result.value = 'You right clicked: ' + this.id;" ondrag = "Result.value = 'You dragged: ' + this.id;" onmouseover = "Result.value = 'Hover: ' + this.id;" onwheel = "Result.value = 'Mouse wheel: ' + event.deltaY;">
+		<input type="button" id="button2" value="Button 2" class="green" onClick="Result.value = 'You clicked: ' + this.id;">
+		<input type="button" id="button3" value="Button 3" class="green" onClick="Result.value = 'You clicked: ' + this.id;">
+		<input type="button" id="button4" value="Button 4" class="redEl" onClick="Result.value = 'You clicked: ' + this.id;">
+		<input type="button" id="button5" value="Button 5" class="redEl" onClick="Result.value = 'You clicked: ' + this.id;">
+		<input type="button" id="button6" value="Button 6" class="greenBlueEl" onClick="Result.value = 'You clicked: ' + this.id;">
+
+        <h3>  Inputs  </h3>
+        	<input type="text" id="input1" value="" class="redEl" onClick="Result.value = 'You clicked: ' + this.id;">
+
+	<h3>  Tree  </h3>	
+
+		<ul id="container">
+			<li id="item1" onClick="Result.value = 'You clicked: ' + this.id;"> Item1
+           			<ul>
+            				<li id="item11" onClick="Result.value = 'You clicked: ' + this.id;"> Item11 </li>
+					<li id="item12" onClick="Result.value = 'You clicked: ' + this.id;"> Item12 </li>
+				</ul>        
+			</li>
+			<li id="item2" onClick="Result.value = 'You clicked: ' + this.id;"> Item2 </li>
+			<li id="item3" onClick="Result.value = 'You clicked: ' + this.id;"> Item3 
+				<ul>
+            				<li id="item31" onClick="Result.value = 'You clicked: ' + this.id;"> Item31 </li>
+				</ul> 
+			</li>
+        
+		</ul>
+	<div id="div1">
+		<input type="checkbox" name="checkbox" onchange="Result.value = 'You select the state: ' + this.checked">CheckBox<br>
+		<input type="radio" id="radiobutton" onchange="Result.value = 'You select the state: ' + this.checked">RadioButton<br>
+		<br>
+		<div id="div2">
+			ComboBox: <select id="combobox" onchange="Result.value = 'You select: ' + this.value">
+				<option value="item1">Item 1</option>
+				<option value="item2">Item 2</option>
+				<option value="item3">Item 3</option>
+			</select><br>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
+
